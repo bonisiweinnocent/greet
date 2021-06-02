@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>greetApp</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="head">
+            <h1>The Greeting App.</h1>
+        </div>
+       
+       
+
+        <div class="row area">
+            <div class="eight columns">
+                <h2>Please enter your name</h2><br>
+                <span class="emptyform red-text"></span><br><br>
+              
+                <input id="text" class="nameString" placeholder="Enter your name name" pattern="[A-Za-z]" ><br><br>
+
+            </div>
+           
+        </div>
+        <div class="count">
+            <p>Counter : </p>
+            
+        </div>
+
+        <div class="row">
+            <h5>Please select a language</h5>
+            <span class="lanError red-text"></span> <br><br>
+            <div class="radioBtn">
+              
+                <label class=" ">
+                    <input type="radio" name="language" class="languageRadio" value="IsiXhosa">
+                    <span class="label-body">IsiXhosa</span>
+                </label>
+                <label class="">
+                    <input type="radio" name="language" class="languageRadio" value="Swahili">
+                    <span class="label-body">Swahili</span>
+                </label>
+                <label class="">
+                    <input type="radio" name="language" class="languageRadio" value="French">
+                    <span class="label-body">French</span>
+                </label>
+            </div>
+                <div class="btn">
+                    <button class="button-primary greetBtn" on type="button" name="button">Greet Me</button>
+                </div>
+
+            
+        </div>
+        <div class="btn">
+            <button class="button-primary resetBtn" on type="button" name="button">Reset</button>
+        </div>
+
+        <div class="row">
+            <div class="col-8 emptyArea">
+
+            </div>
+<div class ="row">
+    <div class="col-8 empty">
+        
+    </div>
+</div>
+        </div>
+    </div>
+    <div>
+        <p><a href="greetTests.html"><button>Testing Testing</button> </a></p>
+    </div>
+
+    <script src="./functions.js"></script>
+    <script src="./script.js"></script>
+
+
+</body>
+
+</html>
