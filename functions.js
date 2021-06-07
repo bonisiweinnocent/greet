@@ -1,7 +1,7 @@
-function greet() {
+function greet(storage) {
     var msg = "";
-    var nameStore = [];
-
+    var nameStore = storage || [];
+   
     function greetings(message, param) {
         var param1 = param.charAt(0).toUpperCase() + param.slice(1).toLowerCase();
         if (message == "Swahili") {
@@ -17,23 +17,23 @@ function greet() {
         }
     }
     function errorSpecial() {
-        return "Please type only charectors"
+        return "Please type only letters."
     }
 
     function getMsg() {
         return msg
     }
     function bothError() {
-        return "Please type in your name and select a language"
+        return "Please type in your name and select a language."
     }
 
 
     function errorsNoName() {
-        return "Please type in your name below"
+        return "Please type in your name below."
     }
 
     function languageErrors() {
-        return "Please select a language"
+        return "Please select a language."
     }
     function store(names) {
         if (!nameStore.includes(names)) {
@@ -43,6 +43,12 @@ function greet() {
     }
     function getName() {
         return nameStore.length
+    }
+    function timer(){
+        return "";
+    }
+    function storeArray() {
+        return nameStore
     }
 
 
@@ -55,7 +61,9 @@ function greet() {
         bothError,
         errorSpecial,
         store,
-        getName
+        getName,
+        timer,
+        storeArray
 
     }
 

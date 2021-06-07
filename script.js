@@ -2,16 +2,31 @@
 var greetBtnElement = document.querySelector(".greetBtn")
 var nameStringElement = document.querySelector(".nameString")
 var emptyAreaElement = document.querySelector(".emptyArea")
-var errorsElement = document.querySelector('.errorNotnumber')
 var emptyformElement = document.querySelector('.emptyform')
-var lanErrorElement = document.querySelector(".lanError")
 var countElement = document.querySelector(".count")
+var resetBtnElement = document.querySelector(".resetBtn")
 
 
-var greetInstance = greet();
+
 var regEx = /^[A-Za-z]+$/;
 
+// var key = param;
+
+var counter1 =0;
+
+var storage = [];
+if (localStorage["param"]){
+    storage= JSON.parse(localStorage.getItem("param"))    
+}
+
+var greetInstance = greet(storage);
+
+
 function greetMe() {
+    setTimeout(function () {
+        emptyformElement.innerHTML = greetInstance.timer()
+
+    }, 4000);
     var checkedRadioBtn = document.querySelector("input[name='language']:checked");
     if (nameStringElement.value === "" && !checkedRadioBtn) {
 
@@ -22,7 +37,7 @@ function greetMe() {
         emptyformElement.innerHTML = greetInstance.errorsNoName()
     }
     else if (!checkedRadioBtn) {
-        lanErrorElement.innerHTML = greetInstance.languageErrors()
+        emptyformElement.innerHTML = greetInstance.languageErrors()
     }
 
     else if (!regEx.test(nameStringElement.value)) {
@@ -34,15 +49,24 @@ function greetMe() {
         greetInstance.greetings(checkedRadioBtn.value, nameStringElement.value)
         emptyAreaElement.innerHTML = greetInstance.getMsg()
         greetInstance.store(nameStringElement.value)
-        countElement.innerHTML ="Counter : " + greetInstance.getName()
+        countElement.innerHTML = "Counter : " + (greetInstance.storeArray()).length
     }
 
-nameStringElement.value= "";
+    nameStringElement.value = "";
+    document.querySelector(".languageRadio").checked = false;
+    localStorage.setItem('param', JSON.stringify(greetInstance.storeArray()));
 
-
-
+ 
+}
+function reset() {
+    localStorage.clear()
+    location.reload()
 
 }
+
+
+countElement.innerHTML = "Counter : " + (greetInstance.storeArray()).length
+resetBtnElement.addEventListener('click', reset)
 
 greetBtnElement.addEventListener('click', greetMe)
 

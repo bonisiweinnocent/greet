@@ -27,7 +27,7 @@ describe('Error messages', function () {
     it('should return "Please type in your name below" message when the language has been chosen but the text input field is still empty and the greetMe button has is clicked ', function () {
         var theApp2 = greet();
        
-        assert.equal("Please type in your name below", theApp2. errorsNoName());
+        assert.equal("Please type in your name below.", theApp2. errorsNoName());
 
 
     });
@@ -35,18 +35,18 @@ describe('Error messages', function () {
         var theApp3 = greet();
       
        
-        assert.equal("Please select a language", theApp3.languageErrors());
+        assert.equal("Please select a language.", theApp3.languageErrors());
     
 });
 it('should return "Please type in your name and select a language" message when the greet button is clicked without selecting a language and inputing a name', function () {
     var theApp4 = greet();
    
-    assert.equal("Please type in your name and select a language", theApp4. bothError());
+    assert.equal("Please type in your name and select a language.", theApp4. bothError());
 });
 it('should return "Please type only charectors" message when there are special charectors typed on the text input field and the greetMe button is clicked', function () {
     var theApp5 = greet();
    
-    assert.equal("Please type only charectors", theApp5.errorSpecial());
+    assert.equal("Please type only letters.", theApp5.errorSpecial());
 });
 });
 });
