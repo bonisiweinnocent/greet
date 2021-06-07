@@ -28,12 +28,14 @@ function greetMe() {
 
     }, 4000);
     var checkedRadioBtn = document.querySelector("input[name='language']:checked");
+    checkedRadioBtn.checked = false;
     if (nameStringElement.value === "" && !checkedRadioBtn) {
+
 
         emptyformElement.innerHTML = greetInstance.bothError()
     }
 
-    else if (nameStringElement.value === "") {
+    if (nameStringElement.value === "") {
         emptyformElement.innerHTML = greetInstance.errorsNoName()
     }
     else if (!checkedRadioBtn) {

@@ -36,8 +36,9 @@ function greet(storage) {
         return "Please select a language."
     }
     function store(names) {
-        if (!nameStore.includes(names)) {
-            nameStore.push(names)
+    var nameTake= names.charAt(0).toUpperCase() + names.slice(1).toLowerCase();
+        if (!nameStore.includes(nameTake)) {
+            nameStore.push(nameTake)
             return true
         }
     }
