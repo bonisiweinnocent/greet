@@ -28,14 +28,11 @@ function greetMe() {
 
     }, 4000);
     var checkedRadioBtn = document.querySelector("input[name='language']:checked");
-    checkedRadioBtn.checked = false;
     if (nameStringElement.value === "" && !checkedRadioBtn) {
-
-
         emptyformElement.innerHTML = greetInstance.bothError()
     }
 
-    if (nameStringElement.value === "") {
+    else if (nameStringElement.value === "") {
         emptyformElement.innerHTML = greetInstance.errorsNoName()
     }
     else if (!checkedRadioBtn) {
@@ -55,6 +52,8 @@ function greetMe() {
     }
 
     nameStringElement.value = "";
+    checkedRadioBtn.checked = false;
+
     document.querySelector(".languageRadio").checked = false;
     localStorage.setItem('param', JSON.stringify(greetInstance.storeArray()));
 
@@ -69,7 +68,6 @@ function reset() {
 
 countElement.innerHTML = "Counter : " + (greetInstance.storeArray()).length
 resetBtnElement.addEventListener('click', reset)
-
 greetBtnElement.addEventListener('click', greetMe)
 
 

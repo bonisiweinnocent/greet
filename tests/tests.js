@@ -43,7 +43,7 @@ it('should return "Please type in your name and select a language" message when 
    
     assert.equal("Please type in your name and select a language.", theApp4. bothError());
 });
-it('should return "Please type only charectors" message when there are special charectors typed on the text input field and the greetMe button is clicked', function () {
+it('should return "Please type only letters" message when there are special charectors typed on the text input field and the greetMe button is clicked', function () {
     var theApp5 = greet();
    
     assert.equal("Please type only letters.", theApp5.errorSpecial());

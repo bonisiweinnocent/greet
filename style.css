@@ -120,7 +120,8 @@ margin: 5px;
    
 }
 .emptyform{
-    padding-left: 7rem;
+    padding-left: 4rem;
+    font-size: 12px;
 
 }
 .row h2{
@@ -133,9 +134,9 @@ margin: 5px;
     border-color: red;
     border-width: 3px;
     margin-left: 1rem;
-    margin-right: 1rem;
-    padding-left: 8rem;
-    padding-right: 8rem;
+    /* margin-right: 1rem; */
+    padding-left: 1rem;
+    /* padding-right: 8rem; */
 
 }
 .count{
@@ -164,12 +165,74 @@ margin: 5px;
 .resetbtn{
     margin-left: 5rem;
 }
-.test{
-    margin-left: 7rem;
-    margin-bottom: 1rem;
 
-}
     }
 
-    @media screen and (max-width: 992px) and (min-width: 689px) {
-}
+    @media screen and (max-width: 687px) and (min-width: 291px) {
+        body{
+            margin: 3px;
+                }
+            .head h1{
+                padding-bottom: 0.5rem;
+                padding-left: 7rem;
+                margin-top: 2rem;
+                font-size: 10px;
+             
+              
+            }
+            
+            .area h2{
+                padding-left: 7rem;
+                font-size: 10px;
+               
+            }
+            .emptyform{
+                padding-left: 4rem;
+                font-size: 12px;
+            
+            }
+            .row h2{
+                padding-left: 10rem;
+                padding-top: 5px;
+                margin-bottom: 2rem;
+                font-size: 10px;
+            }
+            .nameString{
+                border-color: red;
+                border-width: 3px;
+                margin-left: 1rem;
+                /* margin-right: 1rem; */
+                padding-left: 1rem;
+                /* padding-right: 8rem; */
+            
+            }
+            .count{
+                padding-left: 5rem;
+            }
+            .radios{
+                width: 13px;
+                padding-left: 4rem;
+               
+            }
+            
+            .emptyArea{
+                padding: 0.5rem;
+                background: #05e210;
+                width: 45%;
+                margin-left: 5rem;
+                margin-bottom: 5px;
+            }
+            .container{
+                padding: 1rem;
+                margin: 0.5rem;
+            }
+            .greetbtn {
+                margin-left: 5rem;
+            }
+            .resetbtn{
+                margin-left: 5rem;
+            }
+            
+                }
+              
+
