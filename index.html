@@ -14,21 +14,21 @@
         <div class="head">
             <h1>The Greeting App.</h1>
         </div>
+        <div class="please">
+            <h2>Please enter your name</h2><br>
+        </div>
+        
+        <span class="emptyform red-text"></span><br><br>
 
         <div class="area">
-            <!-- <div class="eight columns"> -->
-                <h2>Please enter your name</h2><br>
-                <span class="emptyform red-text"></span><br><br>
-                <input id="text" class="nameString" placeholder="Enter your name here"><br><br>
+            <input id="text" class="nameString" placeholder="Enter your name here"><br>
 
-            <!-- </div> -->
+            <div class="count yellow-text">
+                <p><b> Counter : 0</b></p>
 
-        </div>
-        <div class="count">
-            <p>Counter : 0</p>
+            </div>
 
         </div>
-
         <div class="row">
             <h2>Please select a language</h2>
             <div class="radioBtn">
@@ -46,30 +46,20 @@
                     <span class="label-body">French</span>
                 </label>
             </div>
-            <div class="greetbtn">
-                <button class="button-primary greetBtn" on type="button" name="button">Greet Me</button>
+            <div class="greetbtn pressor">
+                <button class="button-primary greetBtn" on type="button" name="button">Greet Me</button><br>
+                <button class="button-primary resetBtn" on type="button" name="button">Reset</button>
             </div>
 
 
         </div>
-       
-        <div class="row">
-            <div class="col-8 emptyArea">
 
-            </div>
-            <div class="row">
-                <div class="col-8 empty">
 
-                </div>
-            </div>
-        </div>
-        <div class="resetbtn">
-            <button class="button-primary resetBtn" on type="button" name="button">Reset</button>
-        </div>
 
-  
-    <script src="./functions.js"></script>
-    <script src="./script.js"></script>
+
+
+        <script src="./functions.js"></script>
+        <script src="./script.js"></script>
 
 
 </body>

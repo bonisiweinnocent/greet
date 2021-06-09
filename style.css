@@ -3,8 +3,13 @@
     margin: 0; 
 }
 body {
-  
-background-color: #F08080;
+
+background-color: dimgray;
+/* padding: 1rem;
+margin: 0.5rem;
+border: 14px solid yellow;
+/* border-bottom-left-radius: 12rem; */
+/* box-shadow: 10px 10px;  */
     
    
 }
@@ -15,11 +20,25 @@ background-color: #F08080;
    margin-top: 5rem;
    font-size: 3rem;
 }
+.area{
+    display: flex;
+    flex-direction: column-reverse;
+    /* justify-content: space-around; */
+    justify-content: center;
+     
+}
 .area h2{
     padding-left: 26rem;
    
 }
+.area .count{
+    display: flex;
+}
 .emptyform{
+    padding-left: 26rem;
+
+}
+.please{
     padding-left: 26rem;
 
 }
@@ -31,9 +50,10 @@ background-color: #F08080;
 .nameString{
     border-color: red;
     border-width: 5px;
-    margin-left: 19rem;
-    padding-left: 18rem;
-    padding-right: 13rem;
+    margin-left: 21rem;
+    margin-right: 21rem;
+    padding-left: 13rem;
+    /* padding-right: 3rem; */
 
 }
 .count{
@@ -53,11 +73,19 @@ background-color: #F08080;
 }
 .container{
     padding: 1rem;
-    margin: 0.5rem;
+    margin: 2rem;
+    border: 14px solid yellow;
+    /* border-bottom-left-radius: 12rem; */
+    box-shadow: 10px 10px;
 }
 
 .red-text{
     color: red;
+}
+.yellow-text{
+    color: yellow;
+    font-weight: bolder;
+    text-shadow: black;
 }
 .greetbtn button{
     background-color: #F08080; 
@@ -75,6 +103,9 @@ background-color: #F08080;
 }
 .greetbtn {
     margin-left: 45rem;
+    display: flex;
+  
+
 }
 .resetbtn button{
     background-color: #F08080; 
@@ -101,10 +132,10 @@ background-color: #F08080;
 /* media query */
 
 
-@media  screen and (max-width:688px)  {
-    body{
+@media  screen and (max-width:300px)  {
+    /* body{
 margin: 5px;
-    }
+    } */
 .head h1{
     padding-bottom: 0.5rem;
     padding-left: 7rem;
@@ -166,17 +197,17 @@ margin: 5px;
     margin-left: 5rem;
 }
 
-    }
+}
 
     @media screen and (max-width: 687px) and (min-width: 291px) {
         body{
-            margin: 3px;
+            margin: 100%;
                 }
-            .head h1{
-                padding-bottom: 0.5rem;
-                padding-left: 7rem;
-                margin-top: 2rem;
-                font-size: 10px;
+            .head {
+                 padding-bottom: 0.5rem;
+                 padding-left: 7rem; 
+                 margin-top: 2rem;
+                font-size: 8rem; 
              
               
             }
@@ -198,12 +229,13 @@ margin: 5px;
                 font-size: 10px;
             }
             .nameString{
-                border-color: red;
+            
                 border-width: 3px;
-                margin-left: 1rem;
+                margin-left: -1rem;
+                
                 /* margin-right: 1rem; */
-                padding-left: 1rem;
-                /* padding-right: 8rem; */
+                padding: -55rem;
+                padding-right: 8rem;
             
             }
             .count{
@@ -232,7 +264,12 @@ margin: 5px;
             .resetbtn{
                 margin-left: 5rem;
             }
+            .radioBtn button{ 
+                width: 5px;
+                display: flex;
+            }
             
                 }
               
 
+            

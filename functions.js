@@ -3,6 +3,7 @@ function greet(storage) {
     var nameStore = storage || [];
 
     function greetings(message, param) {
+        
         var param1 = param.charAt(0).toUpperCase() + param.slice(1).toLowerCase();
         if (message == "Swahili") {
             msg = 'Jambo, ' + param1;
@@ -17,23 +18,36 @@ function greet(storage) {
         }
     }
     function errorSpecial() {
+
         return "Please type only letters."
     }
 
     function getMsg() {
         return msg
     }
-    function bothError() {
-        return "Please type in your name and select a language."
+    function bothError(name,language) {
+        if(name === "" && !language){
+            return "Please type in your name and select a language."
+
+        }
     }
 
 
-    function errorsNoName() {
-        return "Please type in your name below."
+    function errorsNoName(name) {
+        if (!name) {
+            return "Please type in your name below."
+
+        }
     }
 
-    function languageErrors() {
-        return "Please select a language."
+    function languageErrors(lang) {
+        if(!lang){
+            return "Please select a language."
+
+        }
+    }
+    function storageError() {
+        return "You have successfully cleared your local storage"
     }
     function store(names) {
         var nameTake = names.charAt(0).toUpperCase() + names.slice(1).toLowerCase();
@@ -64,7 +78,8 @@ function greet(storage) {
         store,
         getName,
         timer,
-        storeArray
+        storeArray,
+        storageError
 
     }
 
