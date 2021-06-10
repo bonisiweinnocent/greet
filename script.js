@@ -58,15 +58,16 @@ function greetMe() {
 }
 function reset() {
     setTimeout(function () {
+        localStorage.clear()
+        location.reload()
         emptyformElement.innerHTML = greetInstance.timer()
 
-    }, 7000);
+    }, 4000);
     
      if(resetBtnElement){
         emptyformElement.innerHTML = greetInstance.storageError()
     }
-    localStorage.clear()
-    location.reload()
+   
 
 }
 countElement.innerHTML = "Counter : " + (greetInstance.storeArray()).length

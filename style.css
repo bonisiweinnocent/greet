@@ -27,7 +27,7 @@ border: 14px solid yellow;
     justify-content: center;
      
 }
-.area h2{
+.area h5{
     padding-left: 26rem;
    
 }
@@ -42,10 +42,11 @@ border: 14px solid yellow;
     padding-left: 26rem;
 
 }
-.row h2{
+.row h5{
     padding-left: 26rem;
     padding-top: 2rem;
     margin-bottom: 2rem;
+    
 }
 .nameString{
     border-color: red;
@@ -106,6 +107,9 @@ border: 14px solid yellow;
     display: flex;
   
 
+}
+.pressor{
+    margin-left: 25rem;
 }
 .resetbtn button{
     background-color: #F08080; 
